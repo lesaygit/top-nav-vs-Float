@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+.topnav_link {
+  float: left; /*al aplicar float x defecto muestra el elemento en bloque*/
+  color: black;
+  text-align: center;
+  padding: 14px 16px; /*primero toma valor eje y y despues ejex*/
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.topnav_link:hover {
+  background-color: #ddd;
+  color: #000;
+}
+.topnav_link--active {
+  background-color: #2196f3;
+  color: white;
+}
+.search-container {
+  float: right;
+}
+.search-container_input {
+  padding: 6px; /*por todos los ejes respecto a su content*/
+  margin-top: 7px; /*como el padding link es 14 le di 7*/
+  font-size: 17px;
+  border: none;
+}
+.search-container_btn {
+  padding: 6px 10px;
+  margin-top: 7px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+.search-container_btn:hover {
+  background: #ccc;
+}
+/* resposi desing con media query*/
+@media screen and (max-width: 600px) {
+  .search-container_btn {
+    background-color: #2196f3;
+    color: #fff;
+  }
+  .topnav_link {
+    display: block;
+    float: none;
+  }
+  .search-container {
+    float: none;
+  }
+  .search-container_input {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    border: 1px solid #b9bec2;
+  }
+  .search-container_btn {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+  }
+}
